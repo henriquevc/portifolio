@@ -1,0 +1,56 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding-top: 1rem;
+    /* background: -webkit-linear-gradient(to left, #2C3E50 , #FD746C); */
+    /* background: linear-gradient(to left, #2C3E50 , #FD746C); */
+    /* background: #2C3E50; */
+    background-image: url('louis-maniquet-Ae64KHAzt1I-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial;
+}
+
+body li {
+    list-style: none;
+}
+
+body a {
+    text-decoration: none;
+    color: #cfcdcd;
+}
+
+header a {
+    font-size: 20px;
+    padding: 8px 16px;
+    margin: 4px;
+    border-radius: 24px;
+    background-color: transparent;
+    transition: background-color 0.4s;
+    letter-spacing: 0.04rem;
+}
+
+header a:hover {
+    background-color: #021e24;
+    color: white;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+header h1, header h2 {
+    margin: 4px;
+    text-align: center;
+    color: #021e24;
+}
+
+header .site-title {
+    margin-top: 10%;
+}
