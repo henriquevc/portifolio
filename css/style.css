@@ -9,11 +9,12 @@ body {
     /* background: -webkit-linear-gradient(to left, #2C3E50 , #FD746C); */
     /* background: linear-gradient(to left, #2C3E50 , #FD746C); */
     /* background: #2C3E50; */
-    background-image: url('../img/louis-maniquet-Ae64KHAzt1I-unsplash.jpg');
-    background-size: auto 100vh;
+    background-image: url('../img/markos-mant-6OQiVxXO9JU-unsplash.jpg');
+    background-size: cover;
     font-family: Arial;
     height: 100vh;
     font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* breakpoint */
@@ -34,7 +35,7 @@ header {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center ;
+    align-items: baseline;
 }
 
 .menu {
@@ -73,6 +74,19 @@ a:hover {
     color: #fff;
 }
 
+.dados-pessois {
+    padding-top: 100px;
+}
+
+header figure {
+    text-align: center;
+}
+
+header figure .foto-perfil {
+    width: 192px;
+    height: 192px;
+    border-radius: 50%;
+}
 .site-subtitle, 
 .site-title {
     color: #021e24;
@@ -80,14 +94,77 @@ a:hover {
 }
 
 .site-title {
+    font-family: 'Pacifico', cursive;
     font-size: 3em;
 }
 
 .site-subtitle {
+    font-family: 'Righteous', cursive;
     font-size: 2em;
+    line-height: 1.8em;
+
 }
 
-.img-portfolio {
-    height: 180px;
-    width: 180px;
+.projetos {
+    padding: 3.5em 2em 2em 2em;
+    background-color: #021e24;
+}
+
+.projetos h2 {
+    font-family: 'Righteous', cursive;
+    font-size: 2em;
+    letter-spacing: 0.06em;
+    color: whitesmoke;
+    margin-bottom: 1.2em;
+}
+
+@media (max-width: 560px) {
+    .projetos h2 {
+        margin-top: 1em;
+    }
+}
+
+.projetos .grid figcaption {
+    color: whitesmoke;
+}
+
+.projetos .grid {
+    display: grid;
+    gap: 2em;
+    justify-content: center;
+}
+
+.img-projetos {
+    width: 360px;
+    height: 270px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+@media (min-width: 560px) {
+    .projetos .grid {
+        grid-template-columns: 240px 240px;
+    }
+    .img-projetos {
+        width: 240px;
+        height: 180px;
+        border-radius: 4px;
+    }
+}
+
+@media (min-width: 880px) {
+    .projetos .grid {
+        grid-template-columns: repeat(3, 240px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .projetos .grid {
+        grid-template-columns: repeat(3, 360px);
+    }
+
+    .img-projetos {
+        width: 360px;
+        height: 270px;
+    }
 }
