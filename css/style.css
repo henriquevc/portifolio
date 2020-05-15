@@ -1,0 +1,93 @@
+/* reset do css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: -webkit-linear-gradient(to left, #2C3E50 , #FD746C); */
+    /* background: linear-gradient(to left, #2C3E50 , #FD746C); */
+    /* background: #2C3E50; */
+    background-image: url('../img/louis-maniquet-Ae64KHAzt1I-unsplash.jpg');
+    background-size: auto 100vh;
+    font-family: Arial;
+    height: 100vh;
+    font-size: 12px;
+}
+
+/* breakpoint */
+@media (min-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+
+.menu {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    padding: 4px 0;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.menu li {
+    list-style: none; 
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: transparent;
+    transition: background-color 0.4s;
+}
+
+a {
+    text-decoration: none;
+    color: #021e24;
+}
+
+a:hover {
+    background-color: #021e24;
+    color: #fff;
+}
+
+.site-subtitle, 
+.site-title {
+    color: #021e24;
+    text-align: center;
+}
+
+.site-title {
+    font-size: 3em;
+}
+
+.site-subtitle {
+    font-size: 2em;
+}
+
+.img-portfolio {
+    height: 180px;
+    width: 180px;
+}
