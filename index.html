@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9047cea092.js" crossorigin="anonymous"></script>
     <title>Henrique Carvalho</title>
 </head>
 
@@ -13,16 +16,16 @@
     <header>
 
         <nav class="menu">
-            <ul>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#">Contato</a></li>
+            <ul class="container">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
 
-        <div class="dados-pessois">
+        <div class="dados-pessoais">
             <figure>
-                <img class="foto-perfil" src="./img/foto-perfil.png" alt="foto de perfil">
+                <img class="foto-perfil" src="./img/foto-perfil.png" alt="foto de perfil Henrique Carvalho">
             </figure>
             <h1 class="site-title">Henrique Carvalho</h1>
             <h2 class="site-subtitle">Desenvolvedor Fullstack</h2>
@@ -30,27 +33,92 @@
 
     </header>
 
-    <section id="projetos" class="projetos">
-        <h2>Projetos</h2>
+    <section id="sobre" class="sobre container">
+        <h2>Sobre</h2>
+        <figure class="avatar">
+            <img  src="./img/foto-perfil.png" alt="Foto de perfil">
+        </figure>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, praesentium obcaecati vitae nulla error
+            deserunt pariatur quia sed similique autem ea magni dignissimos, exercitationem impedit amet repellat.
+            Quisquam, itaque iure.</p>
+        <p>Repellat consequatur odit ea et cupiditate fugiat nulla tempora saepe culpa! Iure corrupti odit
+            exercitationem accusamus, voluptatum ratione nemo reprehenderit laborum rerum asperiores velit consectetur
+            qui tempora fuga magni temporibus.</p>
+        <p>Repellat consequatur odit ea et cupiditate fugiat nulla tempora saepe culpa! Iure corrupti odit
+            exercitationem accusamus, voluptatum ratione nemo reprehenderit laborum rerum asperiores velit consectetur
+            qui tempora fuga magni temporibus.</p>
+        <p>Este site foi construído durante a <a href="https://www.alura.com.br/imersao-css" target="blank">Imerssão CSS</a> ;)
+        </p>
+    </section>
+
+    <section id="portfolio" class="portfolio container">
+        <h2>Portfólio</h2>
 
         <div class="grid">
-            <figure>
-                <img class="img-projetos" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
-                <figcaption>eCommerce</figcaption>
-            </figure>
-            <figure>
-                <img class="img-projetos" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
-                <figcaption>Mobile</figcaption>
-            </figure>
-            <figure>
-                <img class="img-projetos" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
-                <figcaption>Web design</figcaption>
-            </figure>
-            <figure>
-                <img class="img-projetos" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg"
-                    alt="Projetos pessoais">
-                <figcaption>Projetos pessoais</figcaption>
-            </figure>
+
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
+                    </figure>
+                    <div class="card-back">
+                        eCommerce
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt="Mobile">
+                    </figure>
+                    <div class="card-back">
+                        Mobile
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
+                    </figure>
+                    <div class="card-back">
+                        Web design
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg"
+                            alt="portfolio pessoais">
+                    </figure>
+                    <div class="card-back">
+                        projetos pessoais
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contato container" id="contato">
+        <h2>Contato</h2>
+        <div class="grid icons">
+            <a target="_blank" href="https://github.com/henriquevc">
+                <i class="fab fa-github"></i>
+            </a>
+            <a target="_blank" href="https://twitter.com/rickvilanova">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/henrique-vilanova-carvalho/">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:henriquevc93@gmail.com">
+                <i class="far fa-envelope"></i>
+            </a>
         </div>
     </section>
 </body>

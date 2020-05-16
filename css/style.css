@@ -6,28 +6,23 @@
 }
 
 body {
-    /* background: -webkit-linear-gradient(to left, #2C3E50 , #FD746C); */
-    /* background: linear-gradient(to left, #2C3E50 , #FD746C); */
-    /* background: #2C3E50; */
-    background-image: url('../img/markos-mant-6OQiVxXO9JU-unsplash.jpg');
+    background: #000f16;
+    background-image: url('../img/louis-maniquet-Ae64KHAzt1I-unsplash.jpg');
     background-size: cover;
-    font-family: Arial;
-    height: 100vh;
-    font-size: 12px;
+    background-repeat: no-repeat;
     font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    font-size: 14px;
 }
 
-/* breakpoint */
-@media (min-width: 400px) {
-    body {
-        font-size: 14px;
-    }
-
+a {
+    text-decoration: none;
 }
+
 
 @media (min-width: 600px) {
     body {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
@@ -35,15 +30,16 @@ header {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
 }
 
 .menu {
     background-color: white;
     position: fixed;
     top: 0;
+    z-index: 1;
     width: 100vw;
-    padding: 4px 0;
+    padding: 5px 0;
 }
 
 .menu ul {
@@ -53,7 +49,7 @@ header {
 
 
 .menu li {
-    list-style: none; 
+    list-style: none;
 }
 
 .menu a {
@@ -61,22 +57,40 @@ header {
     padding: 10px 20px;
     border-radius: 30px;
     background-color: transparent;
-    transition: background-color 0.4s;
+    font-weight: bold;
+    transition: background-color 0.4s, color 0.4s;
+    color: #000f16;
 }
 
-a {
-    text-decoration: none;
-    color: #021e24;
-}
-
-a:hover {
-    background-color: #021e24;
+.menu a:hover,
+.menu a:active {
+    background-color: #000f16;
     color: #fff;
 }
 
-.dados-pessois {
-    padding-top: 100px;
+.dados-pessoais {
+    transform: scale(1);
+    opacity: 1;
+    min-height: 560px;
+    padding: 0 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .6);
+    animation: linear 0.5s animacaoTitulo;
 }
+
+@keyframes animacaoTitulo {
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1; 
+    }
+}
+
 
 header figure {
     text-align: center;
@@ -87,9 +101,10 @@ header figure .foto-perfil {
     height: 192px;
     border-radius: 50%;
 }
-.site-subtitle, 
+
+.site-subtitle,
 .site-title {
-    color: #021e24;
+    color: #e0ebef;
     text-align: center;
 }
 
@@ -105,66 +120,140 @@ header figure .foto-perfil {
 
 }
 
-.projetos {
-    padding: 3.5em 2em 2em 2em;
-    background-color: #021e24;
+.sobre,
+.portfolio,
+.contato {
+    padding: 4em 2em 2em 2em;
+    background-color: #000f16;
+    color: whitesmoke;
 }
 
-.projetos h2 {
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.sobre h2,
+.portfolio h2,
+.contato h2 {
     font-family: 'Righteous', cursive;
-    font-size: 2em;
-    letter-spacing: 0.06em;
     color: whitesmoke;
-    margin-bottom: 1.2em;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+}
+
+.sobre p {
+  text-indent: 1.4em;
+  margin-bottom: 1.4em;
+  text-align: justify;
+}
+
+.sobre a {
+    color: #12e2cf;
+}
+
+.sobre .avatar {
+    float: right;
+    margin-left: 1.5em;
+}
+
+.sobre .avatar img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
 }
 
 @media (max-width: 560px) {
-    .projetos h2 {
+    .sobre h2,
+    .portfolio h2,
+    .contato h2 {
         margin-top: 1em;
     }
 }
 
-.projetos .grid figcaption {
-    color: whitesmoke;
-}
-
-.projetos .grid {
+.portfolio .grid {
     display: grid;
     gap: 2em;
-    justify-content: center;
-}
-
-.img-projetos {
-    width: 360px;
-    height: 270px;
-    border-radius: 4px;
-    object-fit: cover;
 }
 
 @media (min-width: 560px) {
-    .projetos .grid {
-        grid-template-columns: 240px 240px;
-    }
-    .img-projetos {
-        width: 240px;
-        height: 180px;
-        border-radius: 4px;
+    .portfolio .grid {
+        grid-template-columns: repeat(2, 50%);
+        justify-content: center;
     }
 }
 
 @media (min-width: 880px) {
-    .projetos .grid {
-        grid-template-columns: repeat(3, 240px);
+    .portfolio .grid {
+        margin-left: 4px;
+        margin-right: 4px;
+        justify-content: space-around;
+        grid-template-columns: repeat(3, 33%);
     }
 }
 
-@media (min-width: 1200px) {
-    .projetos .grid {
-        grid-template-columns: repeat(3, 360px);
-    }
+.flip-card {
+    height: 240px;
+    perspective: 1000px;
+}
 
-    .img-projetos {
-        width: 360px;
-        height: 270px;
-    }
+.flip-card:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 600ms;
+}
+
+.card-front,
+.card-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+}
+
+.card-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 240px;
+    width: 100%;
+    transform: rotateY(180deg);
+    font-size: 1em;
+}
+
+.portfolio figure {
+    text-align: center;
+}
+
+.img-portfolio {
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 500ms;
+    border-radius: 8px;
+}
+
+.contato .icons {
+    text-align: center;
+}
+
+.contato a {
+    color: lightgray;
+    font-size: 4em;
+    margin: 5px;
+    transition: text-shadow 400ms;
+}
+
+.contato a:active,
+.contato a:hover {
+    color: white;
+    text-shadow: 0px 0px 10px white;
 }
