@@ -3,10 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
-    background: #000f16;
+    background: #011d2b;
     background-image: url('../img/louis-maniquet-Ae64KHAzt1I-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -59,12 +60,12 @@ header {
     background-color: transparent;
     font-weight: bold;
     transition: background-color 0.4s, color 0.4s;
-    color: #000f16;
+    color: #011d2b;
 }
 
 .menu a:hover,
 .menu a:active {
-    background-color: #000f16;
+    background-color: #011d2b;
     color: #fff;
 }
 
@@ -107,13 +108,12 @@ header figure .foto-perfil {
 }
 
 .site-title {
-    font-family: 'Pacifico', cursive;
     font-size: 3em;
+    font-weight: 300;
 }
 
 .site-subtitle {
-    font-family: 'Righteous', cursive;
-    font-size: 2em;
+    font-size: 1.8em;
     line-height: 1.8em;
 
 }
@@ -122,7 +122,7 @@ header figure .foto-perfil {
 .portfolio,
 .contato {
     padding: 4em 2em 2em 2em;
-    background-color: #000f16;
+    background-color: #011d2b;
     color: whitesmoke;
 }
 
@@ -137,10 +137,10 @@ header figure .foto-perfil {
 .sobre h2,
 .portfolio h2,
 .contato h2 {
-    font-family: 'Righteous', cursive;
     color: whitesmoke;
     margin-bottom: 1.5em;
     font-size: 2em;
+    font-weight: 800;
 }
 
 .sobre p {
